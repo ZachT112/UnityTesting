@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour {
-    [SerializeField] Text scoreText;
+    [SerializeField] private Text scoreText;
 
-    void Start() {}
-    void Update() {
+    private void Start() {}
+    private void Update() {
         scoreText.text = "SCORE: " + ScoreKeeper.instance.GetScore();
     }
 }
