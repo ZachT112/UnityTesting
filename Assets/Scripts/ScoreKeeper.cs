@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreKeeper : MonoBehaviour
+public class ScoreKeeper
 {
-    private int score;
+    public static ScoreKeeper instance = new ScoreKeeper();
 
-    private void Start() {}
-    private void Update() {}
+    private ScoreKeeper() {}
+
+    private int score;
 
     public void SetScore(int score) {
         this.score = score;

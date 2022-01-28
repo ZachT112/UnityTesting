@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int playerDeathAltitudeBottom;
 
     private Rigidbody playerRigidbody;
+    private int respawnScore;
     private bool isJumpPressed;
     private bool isGrounded;
     private float horizontalAxis;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     void Start() {
         playerRigidbody = GetComponent<Rigidbody>();
         isJumpPressed = false;
+        respawnScore = ScoreKeeper.instance.GetScore();
     }
     void Update() {
         isJumpPressed = isJumpPressed ? true : Input.GetAxis("Jump") > 0f;
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate() {
         if (transform.position.y < playerDeathAltitudeBottom) {
+            ScoreKeeper.instance.SetScore(respawnScore);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
@@ -40,6 +43,8 @@ public class Player : MonoBehaviour
 
         if (horizontalAxis != 0f) {
             playerRigidbody.velocity = new Vector3(horizontalAxis * playerSpeed, playerRigidbody.velocity.y, 0);
+        } else if (isGrounded) {
+            playerRigidbody.velocity = Vector3.zero;
         }
     }
 }
