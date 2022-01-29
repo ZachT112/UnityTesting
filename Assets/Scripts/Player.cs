@@ -7,12 +7,12 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Transform groundCheckTransform;
     [SerializeField] private LayerMask groundCheckLayerMask;
+    [SerializeField] private int respawnSceneIndex;
     [SerializeField] private float playerSpeed;
     [SerializeField] private float playerJumpHeight;
     [SerializeField] private int playerDeathAltitudeBottom;
 
     private Rigidbody playerRigidbody;
-    private int respawnScore;
     private bool isJumpPressed;
     private bool isGrounded;
     private float horizontalAxis;
@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     void Start() {
         playerRigidbody = GetComponent<Rigidbody>();
         isJumpPressed = false;
-        respawnScore = ScoreKeeper.instance.GetScore();
     }
     void Update() {
         isJumpPressed = isJumpPressed ? true : Input.GetAxis("Jump") > 0f;
@@ -28,8 +27,8 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate() {
         if (transform.position.y < playerDeathAltitudeBottom) {
-            ScoreKeeper.instance.SetScore(respawnScore);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            ScoreKeeper.instance.SetScore(0);
+            SceneManager.LoadScene(respawnSceneIndex);
         }
 
         isGrounded = Physics.CheckSphere(groundCheckTransform.position, 0.001f, groundCheckLayerMask);

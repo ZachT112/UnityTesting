@@ -48708,16 +48708,16 @@ struct Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74  : public MonoBehaviour_
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___groundCheckTransform_4;
 	// UnityEngine.LayerMask Player::groundCheckLayerMask
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___groundCheckLayerMask_5;
+	// System.Int32 Player::respawnSceneIndex
+	int32_t ___respawnSceneIndex_6;
 	// System.Single Player::playerSpeed
-	float ___playerSpeed_6;
+	float ___playerSpeed_7;
 	// System.Single Player::playerJumpHeight
-	float ___playerJumpHeight_7;
+	float ___playerJumpHeight_8;
 	// System.Int32 Player::playerDeathAltitudeBottom
-	int32_t ___playerDeathAltitudeBottom_8;
+	int32_t ___playerDeathAltitudeBottom_9;
 	// UnityEngine.Rigidbody Player::playerRigidbody
-	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___playerRigidbody_9;
-	// System.Int32 Player::respawnScore
-	int32_t ___respawnScore_10;
+	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___playerRigidbody_10;
 	// System.Boolean Player::isJumpPressed
 	bool ___isJumpPressed_11;
 	// System.Boolean Player::isGrounded

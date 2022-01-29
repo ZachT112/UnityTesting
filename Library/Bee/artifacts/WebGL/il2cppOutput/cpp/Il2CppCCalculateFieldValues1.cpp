@@ -8557,16 +8557,16 @@ struct Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74  : public MonoBehaviour_
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___groundCheckTransform_4;
 	// UnityEngine.LayerMask Player::groundCheckLayerMask
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___groundCheckLayerMask_5;
+	// System.Int32 Player::respawnSceneIndex
+	int32_t ___respawnSceneIndex_6;
 	// System.Single Player::playerSpeed
-	float ___playerSpeed_6;
+	float ___playerSpeed_7;
 	// System.Single Player::playerJumpHeight
-	float ___playerJumpHeight_7;
+	float ___playerJumpHeight_8;
 	// System.Int32 Player::playerDeathAltitudeBottom
-	int32_t ___playerDeathAltitudeBottom_8;
+	int32_t ___playerDeathAltitudeBottom_9;
 	// UnityEngine.Rigidbody Player::playerRigidbody
-	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___playerRigidbody_9;
-	// System.Int32 Player::respawnScore
-	int32_t ___respawnScore_10;
+	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___playerRigidbody_10;
 	// System.Boolean Player::isJumpPressed
 	bool ___isJumpPressed_11;
 	// System.Boolean Player::isGrounded
@@ -9575,7 +9575,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3200[2] =
 	static_cast<int32_t>(offsetof(LevelDisplay_tC27C7195300EFBB6D77F9877191EFFF8F710409D, ___levelText_4)),static_cast<int32_t>(offsetof(LevelDisplay_tC27C7195300EFBB6D77F9877191EFFF8F710409D, ___level_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3201[10] = 
 {
-	static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___groundCheckTransform_4)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___groundCheckLayerMask_5)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerSpeed_6)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerJumpHeight_7)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerDeathAltitudeBottom_8)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerRigidbody_9)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___respawnScore_10)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___isJumpPressed_11)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___isGrounded_12)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___horizontalAxis_13)),};
+	static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___groundCheckTransform_4)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___groundCheckLayerMask_5)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___respawnSceneIndex_6)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerSpeed_7)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerJumpHeight_8)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerDeathAltitudeBottom_9)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___playerRigidbody_10)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___isJumpPressed_11)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___isGrounded_12)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___horizontalAxis_13)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3202[5] = 
 {
 	static_cast<int32_t>(offsetof(Rotate_t3280DFA30ADF04B60D2B142844F3B2364A472EAE, ___x_4)),static_cast<int32_t>(offsetof(Rotate_t3280DFA30ADF04B60D2B142844F3B2364A472EAE, ___y_5)),static_cast<int32_t>(offsetof(Rotate_t3280DFA30ADF04B60D2B142844F3B2364A472EAE, ___z_6)),static_cast<int32_t>(offsetof(Rotate_t3280DFA30ADF04B60D2B142844F3B2364A472EAE, ___rotationsPerSecond_7)),static_cast<int32_t>(offsetof(Rotate_t3280DFA30ADF04B60D2B142844F3B2364A472EAE, ___degreesPerSecond_8)),};
