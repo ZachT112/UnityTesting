@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody playerRigidbody;
     private bool isJumpPressed;
+    private bool isSuperJump;
     private bool isGrounded;
     private float horizontalAxis;
 
@@ -32,10 +33,19 @@ public class Player : MonoBehaviour
         }
 
         isGrounded = Physics.CheckSphere(groundCheckTransform.position, 0.001f, groundCheckLayerMask);
+        if (isGrounded) {
+            isSuperJump = Physics.OverlapSphere(groundCheckTransform.position, 0.001f, groundCheckLayerMask)[0].gameObject.tag == "Bouncy";
+        }
+        
 
         if (isJumpPressed) {
             if (isGrounded) {
-                playerRigidbody.AddForce(Vector3.up * playerJumpHeight, ForceMode.VelocityChange);
+                playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, 0, playerRigidbody.velocity.z);
+                if (isSuperJump) {
+                    playerRigidbody.AddForce(Vector3.up * playerJumpHeight * 1.5f, ForceMode.VelocityChange);
+                } else {
+                    playerRigidbody.AddForce(Vector3.up * playerJumpHeight, ForceMode.VelocityChange);
+                }
             }
             isJumpPressed = false;
         }

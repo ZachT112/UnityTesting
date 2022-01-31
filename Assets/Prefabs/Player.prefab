@@ -165,9 +165,10 @@ MonoBehaviour:
   groundCheckLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  respawnSceneIndex: 0
   playerSpeed: 5
   playerJumpHeight: 7
-  playerDeathAltitudeBottom: -5
+  playerDeathAltitudeBottom: -10
 --- !u!1 &5344339258118311550
 GameObject:
   m_ObjectHideFlags: 0
