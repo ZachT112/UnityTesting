@@ -3966,9 +3966,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: bd814de0d40b394428ca4d1451db9197, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: bd814de0d40b394428ca4d1451db9197, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bd814de0d40b394428ca4d1451db9197, type: 3}
       propertyPath: m_Name
       value: flag
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bd814de0d40b394428ca4d1451db9197, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd814de0d40b394428ca4d1451db9197, type: 3}
@@ -8689,7 +8701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600000f1fc7622848bc4512f9b7bfe1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 3
+  end: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 64
