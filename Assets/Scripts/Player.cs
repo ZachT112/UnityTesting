@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private Rigidbody playerRigidbody;
     private bool isJumpPressed;
     private bool isSuperJump;
+    private bool isSuperSpeed;
     private bool isGrounded;
     private float horizontalAxis;
 
@@ -32,9 +33,11 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(respawnSceneIndex);
         }
 
-        isGrounded = Physics.CheckSphere(groundCheckTransform.position, 0.001f, groundCheckLayerMask);
+        isGrounded = Physics.CheckSphere(groundCheckTransform.position, 0.01f, groundCheckLayerMask);
         if (isGrounded) {
-            isSuperJump = Physics.OverlapSphere(groundCheckTransform.position, 0.001f, groundCheckLayerMask)[0].gameObject.tag == "Bouncy";
+            string tag = Physics.OverlapSphere(groundCheckTransform.position, 0.01f, groundCheckLayerMask)[0].gameObject.tag;
+            isSuperJump = (tag == "Bouncy");
+            isSuperSpeed = (tag == "Speedy");
         }
         
 
@@ -51,7 +54,11 @@ public class Player : MonoBehaviour
         }
 
         if (horizontalAxis != 0f) {
-            playerRigidbody.velocity = new Vector3(horizontalAxis * playerSpeed, playerRigidbody.velocity.y, 0);
+            if (isSuperSpeed) {
+                playerRigidbody.velocity = new Vector3(horizontalAxis * playerSpeed * 2f, playerRigidbody.velocity.y, 0);
+            } else {
+                playerRigidbody.velocity = new Vector3(horizontalAxis * playerSpeed, playerRigidbody.velocity.y, 0);
+            }
         } else if (isGrounded) {
             playerRigidbody.velocity = Vector3.zero;
         }
