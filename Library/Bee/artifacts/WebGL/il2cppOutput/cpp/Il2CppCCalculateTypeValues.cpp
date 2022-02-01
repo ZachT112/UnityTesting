@@ -44396,10 +44396,12 @@ struct Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74  : public MonoBehaviour_
 	bool ___isJumpPressed_11;
 	// System.Boolean Player::isSuperJump
 	bool ___isSuperJump_12;
+	// System.Boolean Player::isSuperSpeed
+	bool ___isSuperSpeed_13;
 	// System.Boolean Player::isGrounded
-	bool ___isGrounded_13;
+	bool ___isGrounded_14;
 	// System.Single Player::horizontalAxis
-	float ___horizontalAxis_14;
+	float ___horizontalAxis_15;
 };
 
 // UnityEngine.UIElements.PointerCancelEvent
