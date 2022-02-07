@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
 
     void Start() {
         playerRigidbody = GetComponent<Rigidbody>();
-        isJumpPressed = false;
     }
     void Update() {
         isJumpPressed = isJumpPressed ? true : Input.GetAxis("Jump") > 0f;
