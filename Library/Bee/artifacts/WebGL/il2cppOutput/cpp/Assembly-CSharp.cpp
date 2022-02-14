@@ -972,8 +972,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_Start_mC31CF4F40DDEA35C5E39E8C43E
 		L_0 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		__this->___playerRigidbody_10 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerRigidbody_10), (void*)L_0);
-		// isJumpPressed = false;
-		__this->___isJumpPressed_11 = (bool)0;
 		// }
 		return;
 	}
